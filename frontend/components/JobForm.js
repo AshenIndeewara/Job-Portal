@@ -49,6 +49,42 @@ export default function JobForm() {
         }
       />
 
+      <select
+        className="border p-2 w-full mt-2"
+        onChange={(e) =>
+          setForm({ ...form, category: e.target.value })
+        }
+      >
+        <option value="Plumbing">Plumbing</option>
+        <option value="Electrical">Electrical</option>
+        <option value="Carpentry">Carpentry</option>
+        <option value="Painting">Painting</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <input
+        placeholder="Location"
+        className="border p-2 w-full mt-2"
+        onChange={(e) =>
+          setForm({ ...form, location: e.target.value })
+        }
+      />
+
+      <input
+        placeholder="Contact Name"
+        className="border p-2 w-full mt-2"
+        onChange={(e) =>
+          setForm({ ...form, contactName: e.target.value })
+        }
+      />
+      <input
+        placeholder="Contact Email"
+        className="border p-2 w-full mt-2"
+        onChange={(e) =>
+          setForm({ ...form, contactEmail: e.target.value })
+        }
+      />
+
       <button className="bg-black text-white px-4 py-2 mt-4">
         Submit
       </button>
